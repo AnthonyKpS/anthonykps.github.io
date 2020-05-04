@@ -1,0 +1,88 @@
+body,html {
+    height: 100%;
+    background-color: white;
+    font-family: Poppins;
+}
+
+.jumbotron{
+    background-color: white;
+}
+
+#icons{
+    margin-top: 40px;
+}
+
+.fab{
+    color: black !important;
+}
+
+#facebutton{
+    background-image: url('/home/anthonyk/Documents/Work/anthonykps.gr/imgs/pic.png');
+    background-position: center;
+    background-size: 100%;
+    width: 80px; 
+    height: 80px; 
+    padding: 0;
+    border: none;
+    border-radius: 40px;
+    border-color: #007EA7;
+    font-size: 12px; 
+    text-align: center; 
+}
+
+#facebutton:hover{
+    
+    filter: blur(1px);
+}
+
+.modal-backdrop{
+    background-color: white;
+}
+
+#submitbtn{
+    background-color: #007EA7;
+    border-width: none;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
+}
+
+.modal-content  {
+    border-radius: 20px; 
+}
+
+#longTitle{
+    color: #007EA7;
+}
+
+/*
+####################################################
+M E D I A  Q U E R I E S
+####################################################
+*/
+
+/*
+::::::::::::::::::::::::::::::::::::::::::::::::::::
+Bootstrap 4 breakpoints
+*/
+/* Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {  
+    .typer {font-size: 16px;}
+  }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {  
+.typer {font-size: 30px;}
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+.typer {font-size: 40px;}
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+.typer {font-size: 60px;}
+}
