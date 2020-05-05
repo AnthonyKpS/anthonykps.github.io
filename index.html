@@ -10,11 +10,12 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="./css/styles.css">
         <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <script src="main.js"></script>
         <script src="https://kit.fontawesome.com/ec7be9630b.js" crossorigin="anonymous"></script>
         <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
         <title>Welcome!</title>
     </head>
-    <body>
+    <body onload="validate()">
         <div class="container d-flex h-100">
             <div class="row align-self-center w-100">
                 <div class="col-9">
@@ -53,18 +54,18 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                            <form>
+                            <form name="contact">
                                 <div class="form-group">
                                     <label for="nameLabel" class="font-weight-bold">Your name please</label>
-                                    <input type="text" class="form-control" id="nameInput" placeholder="e.g. Peter Stinks">
+                                    <input type="text" class="form-control" id="nameInput" name="name" placeholder="e.g. Peter Stinks">
                                   </div>
                                 <div class="form-group">
                                   <label for="emailLabel" class="font-weight-bold">Your e-mail aswell</label>
-                                  <input type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="e.g. peter@stinks.com">
+                                  <input type="email" class="form-control" id="emailInput" name="email" aria-describedby="emailHelp" placeholder="e.g. peter@stinks.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1" class="font-weight-bold">What do you want to talk about?</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="e.g. Let's make a space shuttle using nasa's github repos"></textarea>
+                                    <textarea class="form-control" id="textInput" name="text" rows="3" placeholder="e.g. Let's make a space shuttle using nasa's github repos"></textarea>
                                 </div>
                               </form>
                         </div>
