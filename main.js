@@ -20,14 +20,10 @@ function validation() {
 
     console.log("test");
     let nameCondition = /^[a-z ,.'-]+$/i.test(name);
-    let emailCondition = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
+    let emailCondition = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
     let textCondition = /[a-zA-Z0-9,#.-]+/.test(text);
 
-    if ( name.length > 2 && nameCondition && emailCondition && text.length > 3 && textCondition) {
-        submitbtn.disabled = false;
-    } else {
-        submitbtn.disabled = true;
-    }
+    submitbtn.disabled = !(name.length > 2 && nameCondition && emailCondition && text.length > 3 && textCondition);
 }
 
 
