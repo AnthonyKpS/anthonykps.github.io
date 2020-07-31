@@ -15,7 +15,7 @@ function openNav(button) {
         document.getElementById("overlayHeading").innerHTML = "About me";
         document.getElementById("overlayText").innerHTML = "My full name in Anthony Kaparounakis but most people call me kps <br> I'm a Greek living in Athens, Greece and an undergraduate student at dit.hua <br> I have been fiddling with computers for as long as I can remember";
     } else if (button == 2) {
-        document.getElementById("overlayHeading").innerHTML = "My work in keywords";
+        document.getElementById("overlayHeading").innerHTML = "My work";
         document.getElementById("overlayText").innerHTML = "";
     } else {
         document.getElementById("overlayHeading").innerHTML = "Awards";

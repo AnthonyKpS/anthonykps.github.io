@@ -4,14 +4,13 @@ html, body {
 }
 
 .bg-image {  
-  background-image: url(./pic2.png);
+  background-image: url(./imgs/pic2.jpg);
   background-position: center;
   background-size: cover;
-
 }
 
 a {
-  cursor: inherit;
+  cursor: inherit;  
 }
 
 .rightside {
@@ -31,6 +30,11 @@ a {
   font-size: 60px;
   font-weight: 800;
 }
+
+.about span, .work span, .awards span {
+  text-decoration: underline;
+}
+
 
 .about span:hover, .work span:hover, .awards span:hover {
   color: #f99820;
@@ -61,12 +65,12 @@ Overlays
   left: 0;
   top: 0;
   background-color: rgba(32,129,349, 1);
-  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
 /* Position the content inside the overlay */
-.overlay-content {
+.overlay-content {      
   color: white;
   position: relative;
   top: 15%; /* 25% from the top */
@@ -77,6 +81,8 @@ Overlays
 .overlay-content h3 {
   color: #f99820;
   font-weight: 800;
+  text-decoration: underline;
+
 }
 
 .overlay-content p {
