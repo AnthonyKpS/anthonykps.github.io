@@ -1,11 +1,17 @@
 html, body {
   height: 100%;
+  cursor: crosshair;
 }
+
 .bg-image {  
   background-image: url(./pic2.png);
   background-position: center;
   background-size: cover;
 
+}
+
+a {
+  cursor: inherit;
 }
 
 .rightside {
@@ -26,17 +32,7 @@ html, body {
   font-weight: 800;
 }
 
-.about span:hover {
-  color: #f99820;
-  font-weight: 800;
-}
-
-.work span:hover {
-  color: #f99820;
-  font-weight: 800;
-}
-
-.awards span:hover {
+.about span:hover, .work span:hover, .awards span:hover {
   color: #f99820;
   font-weight: 800;
 }
@@ -47,6 +43,7 @@ html, body {
 
 .social i:hover {
   color: #f99820;
+  transition: 0.2s;
 }
 
 /*
@@ -123,9 +120,6 @@ Overlays
     right: 35px;
   }
 }
-
-
-
 
 
 @media (min-width: 576px) { 
