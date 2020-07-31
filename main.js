@@ -1,30 +1,30 @@
-// Get every element from the form
-document.getElementById("nameInput").addEventListener('input', validation);
-document.getElementById("emailInput").addEventListener('input', validation);
-document.getElementById("textInput").addEventListener('input', validation);
+// Overlay functionality
 
-const submitbtn = document.getElementById("submitbtn");
-
-let name = "";
-let email = "";
-let text = "";
-
-console.log(submitbtn);
-
-function validation() {
+// Open when someone clicks on the span element 
+function openNav(button) {
     
-    name = document.getElementById("nameInput").value;
-    email = document.getElementById("emailInput").value;
-    text = document.getElementById("textInput").value;
-
-
-    console.log("test");
-    let nameCondition = /^[a-z ,.'-]+$/i.test(name);
-    let emailCondition = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email);
-    let textCondition = /[a-zA-Z0-9,#.-]+/.test(text);
-
-    submitbtn.disabled = !(name.length > 2 && nameCondition && emailCondition && text.length > 3 && textCondition);
+    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+    
+    if (vw < 992) {
+        document.getElementById("myNav").style.width = "100%";
+    } else {
+        document.getElementById("myNav").style.width = "50%";
+    }
+    
+    if (button == 1){
+        document.getElementById("overlayHeading").innerHTML = "About me";
+        document.getElementById("overlayText").innerHTML = " My full name in Anthony Kaparounakis but most people call me kps. <br> Greek living in Athens, Greece Undergraduate student at dit.hua I have been fiddling with computers for as long as I can remember";
+    } else if (button == 2) {
+        document.getElementById("overlayHeading").innerHTML = "My work in keywords";
+        document.getElementById("overlayText").innerHTML = "";
+    } else {
+        document.getElementById("overlayHeading").innerHTML = "Awards";
+        document.getElementById("overlayText").innerHTML = "";
+    }
 }
 
 
-
+// Close when someone clicks on the "x" symbol inside the overlay
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}

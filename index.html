@@ -1,84 +1,99 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta chatset="utf-8">
-        <meta chatset="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" sizes="180x180" href="/imgs/favicon_io/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/imgs/favicon_io/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/imgs/favicon_io/favicon-16x16.png">
-        <link rel="manifest" href="/imgs/favicon_io/site.webmanifest">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./css/styles.css">
-        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-        <script src="https://kit.fontawesome.com/ec7be9630b.js" crossorigin="anonymous"></script>
-        <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
-        <title>Welcome!</title>
-    </head>
-    <body>
-        <div class="container d-flex h-100">
-            <div class="row align-self-center w-100">
-                <div class="col-9">
-                    <div class="jumbotron">
-                        <h1 class="display-3">Hi, my name is </h1>
-                        <h1>
-                        <span class="typer" id="main" data-words="kaparounakis,kapas,kps" data-delay="100" data-deleteDelay="1000" data-colors="#007EA7"></span>
-                        <span class="cursor" data-owner="main" data-cursor-display="|"></span>
-                        </h1>
-                        <div id="icons">
-                            <a href="https://www.facebook.com/anthonykps/"><span class="fab fa-facebook-f fa-2x mr-1"></span></a>
-                            <a href="https://www.instagram.com/anthony_kps"><span class="fab fa-instagram fa-2x mr-1"></span></a>
-                            <a href="https://www.youtube.com/channel/UCn1Vt4k0MXqsnoO4Jkuwi5g"><span class="fab fa-youtube fa-2x mr-1"></span></a>
-                            <a href="https://twitch.tv/anthonykps"><span class="fab fa-twitch fa-2x mr-1"></span></a>
-                            <a href="https://github.com/AnthonyKpS"><span class="fab fa-git-alt fa-2x mr-1"></span></a>
-                            <a href="https://www.linkedin.com/in/anthony-kaparounakis/"><span class="fab fa-linkedin-in fa-2x"></span></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="jumbotron">
-                        <h1 class="contact" style="text-align: right;">Click me to get in touch</h1>
-                        <button type="button" id="facebutton" class="btn btn-primary float-right"  data-toggle="modal" data-target="#buttonface"></button>
-                    </div>
-                </div>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+  <title>Hello, world!</title>
+</head>
+
+<body>
+
+  <!--Visible Stuff-->
+  <div class="container-fluid h-100">
+    <div class="row no-gutter h-100">
+      <div class="d-none d-lg-block col-md-6 bg-image"></div>
+      <div class="col-md-6 my-auto rightside">
+        <div class="wrapper ml-3 mr-3">
+
+          <div class="content">
+
+            <div class="heading mb-5">
+              <h1>Hello, I'm <span>Anthony</span> </h1>
             </div>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="buttonface" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title font-weight-bold" id="longTitle">Fill in the form below to contact me</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form name="contact">
-                                <div class="form-group">
-                                    <label for="nameLabel" class="font-weight-bold">Your name please</label>
-                                    <input type="text" class="form-control" id="nameInput" name="name" placeholder="e.g. Peter Stinks">
-                                  </div>
-                                <div class="form-group">
-                                  <label for="emailLabel" class="font-weight-bold">Your e-mail aswell</label>
-                                  <input type="email" class="form-control" id="emailInput" name="email" aria-describedby="emailHelp" placeholder="e.g. peter@stinks.com">
-                                </div>
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1" class="font-weight-bold">What do you want to talk about?</label>
-                                    <textarea class="form-control" id="textInput" name="text" rows="3" placeholder="e.g. Let's make a space shuttle using nasa's github repos"></textarea>
-                                </div>
-                              </form>
-                        </div>
-                        <button type="button" id="submitbtn" class="btn btn-primary btn-sm font-weight-bold" disabled>Let's talk business</button>
-                    </div>
-                </div>
+
+            <div class="about">
+              <h2> <span onclick="openNav(1)"> About me 🔍 </span> </h2>
             </div>
+
+            <div class="work">
+              <h2> <span onclick="openNav(2)"> My work in keywords 🏷️ </span> </h2>
+            </div>
+
+            <div class="awards">
+              <h2> <span onclick="openNav(3)"> Awards 🏆 </span> </h2>
+            </div>
+
+            <div class="social mt-5">
+              <h2>Talk to me:</h2>
+              <i class="fab fa-facebook-f fa-2x mr-2"></i>
+              <i class="fab fa-instagram fa-2x mr-2"></i>
+              <i class="fab fa-twitter fa-2x mr-2"></i>
+              <i class="fab fa-youtube fa-2x mr-2"></i>
+              <i class="fab fa-linkedin-in fa-2x mr-2"></i>
+              <i class="fab fa-git-alt fa-2x mr-2"></i>
+            </div>
+
+          </div>
         </div>
-        <!--Scripts-->
-        <script src="main.js"></script>
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+      </div>
+    </div>
+    <!--End of visible stuff-->
+
+    <!--Overlay-->
+    <div id="myNav" class="overlay">
+
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+      <!-- Overlay content -->
+      <div class="overlay-content">
+        <div class="container">
+          <div class="row h-100">
+            <div class="col my-auto">
+              <h3 id="overlayHeading"></h3>
+              <p id="overlayText"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--End of Overlay-->
+
+    <script src="main.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+</body>
+
 </html>
