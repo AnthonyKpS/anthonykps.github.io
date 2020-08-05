@@ -1,0 +1,148 @@
+// Vars
+$white: #ffffff;
+$orange: #f99820;
+$blue: #2081f9;
+
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+body {
+    height: 100%;
+    cursor: crosshair;
+    background-color: $white;
+    color: $blue;
+}
+
+h1 {
+    font-size: 63px;
+    font-weight: 750;
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 650;
+}
+
+p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: $orange;
+    cursor: inherit;
+
+    &:visited {
+        color: $orange;
+        text-decoration: underline;
+    }
+
+    &:hover {
+        color: $orange;
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: $orange;
+    }
+}
+
+button {
+    text-decoration: none;
+    color: $orange;    
+}
+
+#standOut {
+    color: $orange;
+    font-weight: 750;
+    font-size: 68px;
+    text-shadow: 2px 2px $blue;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.bg-image {  
+    background-image: url(../imgs/pic2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#icon {
+    color: $orange;
+    font-size: 30px;
+
+    &:hover {
+        color: $blue;
+    }
+}
+
+.container {
+  padding: 40px;
+}
+
+
+.navlist {
+    li:hover {
+        text-shadow: 2px 2px $orange;
+    }
+}
+
+/* The Overlay (background) */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: $white;
+    overflow-x: hidden; 
+    transition: 0.2s;
+    color: $blue;
+
+    h2 {
+        color: $orange;
+        text-shadow: 2px 2px $blue;
+    }
+
+    .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        z-index: 1;
+        text-decoration: none;
+        color: $orange;
+        font-size: 35px;
+        background-color: Transparent;
+        background-repeat: no-repeat;
+        border: none;
+    }
+
+    .position {
+        font-size: 35px;
+        font-weight: 650;
+    }
+}
+
+ @media screen and (max-height: 450px) {
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }

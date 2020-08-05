@@ -4,27 +4,27 @@
 function openNav(button) {
     
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    
+    var size = "50%";
     if (vw < 992) {
-        document.getElementById("myNav").style.width = "100%";
-    } else {
-        document.getElementById("myNav").style.width = "50%";
+        size = "100%";
     }
+
+    document.getElementById("about").style.width = "0%";
+    document.getElementById("work").style.width = "0%";
+    document.getElementById("awards").style.width = "0%";
     
     if (button == 1){
-        document.getElementById("overlayHeading").innerHTML = "About me";
-        document.getElementById("overlayText").innerHTML = "My full name in Anthony Kaparounakis but most people call me kps <br> I'm a Greek living in Athens, Greece and an undergraduate student at dit.hua <br> I have been fiddling with computers for as long as I can remember";
+        document.getElementById("about").style.width = size;
     } else if (button == 2) {
-        document.getElementById("overlayHeading").innerHTML = "My work";
-        document.getElementById("overlayText").innerHTML = "";
+        document.getElementById("work").style.width = size;
     } else {
-        document.getElementById("overlayHeading").innerHTML = "Awards";
-        document.getElementById("overlayText").innerHTML = "";
+        document.getElementById("awards").style.width = size;
     }
 }
 
-
 // Close when someone clicks on the "x" symbol inside the overlay
 function closeNav() {
-    document.getElementById("myNav").style.width = "0%";
+    document.getElementById("about").style.width = "0%";
+    document.getElementById("work").style.width = "0%";
+    document.getElementById("awards").style.width = "0%";
 }
