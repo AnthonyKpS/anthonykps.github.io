@@ -1,0 +1,208 @@
+// Variables
+$orange: #f99820;
+$white: #ffffff;
+$black: #000000;
+
+// Color Modes
+
+//Hide on of the button
+:root[color-mode="light"] .light--hidden {
+    display: none;
+}
+
+:root[color-mode="dark"] .dark--hidden {
+    display: none;
+}
+
+// Light mode
+:root[color-mode="light"] {
+    --primary: #ffffff;
+    --secondary: #000000;
+    --accent: #f99820;
+}
+
+// Dark mode
+:root[color-mode="dark"] {
+    --primary: #000000;
+    --secondary: #ffffff;
+    --accent: #f99820;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+html {
+    height: 100%;
+    font-size: 65.2%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-family: 'Recursive', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#bulb {
+    background-color: var(--primary);
+    color: var(--secondary);
+    border: none;
+    font-size: 3rem;
+    &:hover {
+        transition: 0.2s;
+        color: var(--accent);
+    }
+}
+
+.typer, .cursor {
+    color: var(--secondary);
+}
+
+.wrapper {
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;    
+    .accent {
+        color: var(--accent);
+        text-shadow: 2px 2px var(--secondary);
+
+    }
+}
+
+h3 {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: var(--secondary);
+    }
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+footer {
+
+    .social {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        flex-wrap: wrap;
+
+        i {
+            color: var(--accent);
+            font-size: 3rem;
+            margin-right: 10px;
+    
+            &:hover, :visited {
+                transition: 0.2s;
+                color: var(--secondary);
+            }
+        }
+    }
+
+    button {
+        background-color: var(--secondary);
+        color: var(--primary);
+        font-weight: 700;
+        border: 5px solid;
+        border-radius: 8px;
+        border-color: var(--secondary);
+        text-shadow: 1px 1px var(--accent);
+        box-shadow: 2px 2px var(--accent);
+
+        &:hover {
+            transition: 0.1s;
+            box-shadow: 5px 5px var(--accent);
+            text-shadow: 2px 2px var(--accent);
+        }
+    }
+}
+
+// Hand wave animation
+.wave {
+    font-size: 3.7rem;
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+}
+  
+@keyframes wave-animation {
+    0% { transform: rotate( 0.0deg) }
+    10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+    20% { transform: rotate(-8.0deg) }
+    30% { transform: rotate(14.0deg) }
+    40% { transform: rotate(-4.0deg) }
+    50% { transform: rotate(10.0deg) }
+    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+}
+
+// Load in animation
+
+
+//MEDIA QUERIES
+@media (min-width: 370px) {
+    .social {
+        i {
+            font-size: 3.7rem;
+        }
+
+        button {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (min-width: 576px) { 
+    
+    .wrapper {
+        padding: 20px;
+        border: 5px solid var(--secondary);
+        border-radius: 10px;
+        box-shadow: 20px 20px var(--secondary);
+    }
+
+    .wave {
+        font-size: 5rem;
+    }
+}
+
+
+
