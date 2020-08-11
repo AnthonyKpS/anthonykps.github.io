@@ -1,5 +1,21 @@
-html {
-  height: 100%;
+:root[color-mode="light"] .light--hidden {
+  display: none;
+}
+
+:root[color-mode="dark"] .dark--hidden {
+  display: none;
+}
+
+:root[color-mode="light"] {
+  --primary: #ffffff;
+  --secondary: #000000;
+  --accent: #f99820;
+}
+
+:root[color-mode="dark"] {
+  --primary: #000000;
+  --secondary: #ffffff;
+  --accent: #f99820;
 }
 
 * {
@@ -9,135 +25,249 @@ html {
           box-sizing: 0;
 }
 
+html {
+  height: 100%;
+  font-size: 65.2%;
+}
+
 body {
   height: 100%;
-  cursor: crosshair;
-  background-color: #ffffff;
-  color: #2081f9;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-family: 'Recursive', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#bulb {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: none;
+  font-size: 3rem;
+}
+
+#bulb:hover {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: var(--accent);
+}
+
+.typer, .cursor {
+  color: var(--secondary);
+}
+
+.wrapper {
+  padding: 20px;
+  text-align: center;
+}
+
+header {
+  padding-bottom: 20px;
 }
 
 h1 {
-  font-size: 63px;
-  font-weight: 750;
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 5px;
 }
 
 h2 {
-  font-size: 35px;
+  font-size: 2.5rem;
   font-weight: 700;
+  margin-bottom: 20px;
+}
+
+h2 .accent {
+  color: var(--accent);
+  text-shadow: 2px 2px var(--secondary);
 }
 
 h3 {
-  font-size: 30px;
-  font-weight: 650;
-}
-
-p {
-  font-size: 30px;
-  font-weight: 600;
-}
-
-a {
-  text-decoration: none;
-  color: #f99820;
-  cursor: inherit;
-}
-
-a:visited {
-  color: #f99820;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #f99820;
-  text-decoration: underline;
-}
-
-a:active {
-  color: #f99820;
-}
-
-button {
-  text-decoration: none;
-  color: #f99820;
-}
-
-#standOut {
-  color: #f99820;
-  font-weight: 750;
-  font-size: 68px;
-  text-shadow: 2px 2px #2081f9;
+  font-size: 1.7rem;
+  font-weight: 500;
 }
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
-.bg-image {
-  background-image: url(../imgs/pic2.jpg);
-  background-position: center;
-  background-size: cover;
+a {
+  text-decoration: none;
 }
 
-#icon {
-  color: #f99820;
-  font-size: 30px;
+a:hover {
+  color: var(--secondary);
 }
 
-#icon:hover {
-  color: #2081f9;
+.underline {
+  text-decoration: underline;
 }
 
-.container {
-  padding: 40px;
+footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  text-align: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.navlist li:hover {
-  text-shadow: 2px 2px #f99820;
+footer .social i {
+  color: var(--accent);
+  font-size: 3rem;
+  margin-right: 10px;
 }
 
-/* The Overlay (background) */
-.overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-color: #ffffff;
-  overflow-x: hidden;
+footer .social i:hover, footer .social i :visited {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  color: #2081f9;
+  color: var(--secondary);
 }
 
-.overlay h2 {
-  color: #f99820;
-  text-shadow: 2px 2px #2081f9;
+footer button {
+  background-color: var(--secondary);
+  color: var(--primary);
+  font-weight: 700;
+  border: 5px solid;
+  border-radius: 8px;
+  border-color: var(--secondary);
+  text-shadow: 1px 1px var(--accent);
+  -webkit-box-shadow: 2px 2px var(--accent);
+          box-shadow: 2px 2px var(--accent);
 }
 
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  z-index: 1;
-  text-decoration: none;
-  color: #f99820;
-  font-size: 35px;
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
+footer button:hover {
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-box-shadow: 5px 5px var(--accent);
+          box-shadow: 5px 5px var(--accent);
+  text-shadow: 2px 2px var(--accent);
 }
 
-.overlay .position {
-  font-size: 35px;
-  font-weight: 650;
+.wave {
+  font-size: 3.7rem;
+  -webkit-animation-name: wave-animation;
+          animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  /* Change to speed up or slow down */
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  -webkit-transform-origin: 70% 70%;
+          transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
+  display: inline-block;
 }
 
-@media screen and (max-height: 450px) {
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+@-webkit-keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  30% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* Reset for the last half to pause */
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  30% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  /* Reset for the last half to pause */
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 370px) {
+  .social i {
+    font-size: 3.7rem;
+  }
+  .social button {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .wrapper {
+    padding: 20px;
+    border: 5px solid var(--secondary);
+    border-radius: 10px;
+    -webkit-box-shadow: 20px 20px var(--secondary);
+            box-shadow: 20px 20px var(--secondary);
+  }
+  .wave {
+    font-size: 5rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

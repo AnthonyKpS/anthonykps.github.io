@@ -1,30 +1,37 @@
-// Overlay functionality
+if (window.CSS && CSS.supports("color", "var(--primary)")) {
+    var toggleColorMode = function toggleColorMode(e) {
 
-// Open when someone clicks on the span element 
-function openNav(button) {
-    
-    const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-    var size = "50%";
-    if (vw < 992) {
-        size = "100%";
-    }
+        // Switch to Light Mode
+        if (e.currentTarget.classList.contains("light--hidden")) {
 
-    document.getElementById("about").style.width = "0%";
-    document.getElementById("work").style.width = "0%";
-    document.getElementById("awards").style.width = "0%";
-    
-    if (button == 1){
-        document.getElementById("about").style.width = size;
-    } else if (button == 2) {
-        document.getElementById("work").style.width = size;
-    } else {
-        document.getElementById("awards").style.width = size;
-    }
-}
+            // Sets the custom html attribute
+            document.documentElement.setAttribute("color-mode", "light");
 
-// Close when someone clicks on the "x" symbol inside the overlay
-function closeNav() {
-    document.getElementById("about").style.width = "0%";
-    document.getElementById("work").style.width = "0%";
-    document.getElementById("awards").style.width = "0%";
+            // Change the typer.js text color
+            document.getElementById("main").style.color = "black"
+            document.getElementById("main").setAttribute("data-colors", "black")
+            return;
+        }
+
+        /* Switch to Dark Mode
+        Sets the custom html attribute */
+        document.documentElement.setAttribute("color-mode", "dark");
+
+        // Change the typer.js text color
+        document.getElementById("main").style.color = "white"
+        document.getElementById("main").setAttribute("data-colors", "white")
+
+    };
+
+    // Get the buttons in the DOM
+    var toggleColorButtons = document.querySelectorAll(".color-mode__btn");
+
+    // Set up event listeners
+    toggleColorButtons.forEach(function (btn) {
+        btn.addEventListener("click", toggleColorMode);
+    });
+} else {
+    // If the feature isn't supported, then we hide the toggle buttons
+    var btnContainer = document.querySelector(".color-mode__header");
+    btnContainer.style.display = "none";
 }
