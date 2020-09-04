@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en" color-mode="light">
+<html lang="en">
 
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
@@ -14,68 +14,79 @@
 
     <!--SEO-->
     <!-- Primary Meta Tags -->
-    <title>Hey, It's me, Anthony Kaparounakis!</title>
-    <meta name="title" content="Hey, It's me, Anthony Kaparounakis!">
-    <meta name="description" content="I ponder, I mess with computers and I laugh.">
+    <title>Hello, it's Anthony Kaparounakis!</title>
+    <meta name="title" content="Hello, it's Anthony Kaparounakis">
+    <meta name="description" content="Got an interesting project in mind? Contact me!">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://anthonykps.github.io">
-    <meta property="og:title" content="Hey, It's me, Anthony Kaparounakis!">
-    <meta property="og:description" content="I ponder, I mess with computers and I laugh.">
-    <meta property="og:image"
-        content="https://anthonykps.github.io/assets/meta/meta.jpg">
+    <meta property="og:title" content="Hello, it's Anthony Kaparounakis">
+    <meta property="og:description" content="Got an interesting project in mind? Contact me!">
+    <meta property="og:image" content="/assets/meta/meta.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://anthonykps.github.io">
-    <meta property="twitter:title" content="Hey, It's me, Anthony Kaparounakis!">
-    <meta property="twitter:description" content="I ponder, I mess with computers and I laugh.">
-    <meta property="twitter:image"
-        content="https://anthonykps.github.io/assets/meta/meta.jpg">
+    <meta property="twitter:title" content="Hello, it's Anthony Kaparounakis">
+    <meta property="twitter:description" content="Got an interesting project in mind? Contact me!">
+    <meta property="twitter:image" content="/assets/meta/meta.jpg">
 
     <!--CSS-->
     <link rel="stylesheet" href="./styles/styles.css">
 
-    <!--Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Recursive" rel="stylesheet">
+    <!--Google Font: Inter-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+
 
     <!--Icons-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
-        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-
+    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
+        integrity="sha384-3Nqiqht3ZZEO8FKj7GR1upiI385J92VwWNLj+FqHxtLYxd9l+WYpeqSOrLh0T12c"
+        crossorigin="anonymous"></script>
     <title>That's me there!</title>
 </head>
-
 <body>
-
-    <div class="wrapper">
-        <header>
+    <div class="content">
+        <div class="title">
             <h1>
-                <span class="typer" id="main" data-words="Geia sou, Hello, Bonjour, Hallo" data-delay="100"
-                    data-deleteDelay="1000" data-colors="black"></span>
-                <span class="cursor" data-owner="main"></span>
-                <span class="wave">👋🏻</span>
+                Hello, <br>
+                it's <span class="uhighlight">Anthony</span>
             </h1>
-            <h2>I'm <span class="accent">Anthony Kaparounakis</span></h2>
-            <h3>I <span class="underline">ponder</span>, I <span class="underline">mess with computers</span> and I <span
-                    class="underline">laugh</span>.</h3>
-        </header>
-        <footer>
-            <div class="social">
-                <a href="https://www.facebook.com/anthonykps/"><i class="fab fa-facebook-f"></i></a>
+            <h2>and I speak <span id="sequence" class="highlight"></span></h2>
+        </div>
+        <div class="status">
+            <h2><span class="now">Now: </span>pursuing my <span class="serif">B.Sc</span> degree at <a href="#">dit.hua</a>.</h2>
+        </div>
+        <div class="contact">
+            <div class="links">
                 <a href="https://www.instagram.com/anthony_kps/"><i class="fab fa-instagram"></i></a>
                 <a href="https://twitter.com/kpsgre"><i class="fab fa-twitter"></i></a>
                 <a href="https://www.youtube.com/channel/UCn1Vt4k0MXqsnoO4Jkuwi5g"><i class="fab fa-youtube"></i></a>
                 <a href="https://www.linkedin.com/in/anthony-kaparounakis/"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/AnthonyKpS"><i class="fab fa-git-alt"></i></a>
                 <a href="mailto:antonikapas@gmail.com"><i class="fas fa-envelope"></i></a>
-                <!--<button>CV</button>-->
             </div>
-        </footer>
+            <h3>Got an interesting project in mind? Contact me!</h3>            
+            <!--<button>CV</button>-->
+        </div>
     </div>
-    <script async src="https://unpkg.com/typer-dot-js@0.1.0/typer.js"></script>
-    <script src="main.js"></script>
-</body>
+    <script>
+        // Sequence
+        var words = ['binary', 'assembly','html', 'css', 'scss', 'bootstrap', 'js', 'c', 'c++', 'python', 'sql', 'php', 'linux', 'figma', 'adobe XD' ];
+        textSequence(0);
 
+        function textSequence(i) {
+            if (words.length > i) {
+                setTimeout(function () {
+                    document.getElementById("sequence").innerHTML = words[i] + '.';
+                    textSequence(++i);
+                }, 500); // half a second (in milliseconds)
+
+            } else if (words.length == i) { // Loop
+                textSequence(0);
+            }
+        }
+    </script>
+</body>
 </html>
