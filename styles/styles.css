@@ -13,9 +13,18 @@ html {
 body {
   height: 100vh;
   width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: Inter, Helvetica, 'sans-serif';
   color: #FFFFFF;
-  background-color: #FFFFFF;
+  background-color: #0040BF;
   -webkit-animation-name: load;
           animation-name: load;
   -webkit-animation-duration: 4s;
@@ -24,7 +33,6 @@ body {
 
 .serif {
   font-family: 'Roboto Slab', serif;
-  font-style: italic;
 }
 
 .inactive {
@@ -44,13 +52,13 @@ body {
 }
 
 .highlight {
-  color: #0038FF;
+  color: #0040BF;
   font-style: italic;
 }
 
 .uhighlight {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, #0038FF));
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #0038FF 50%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(255, 255, 255, 0)), color-stop(50%, #0040BF));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, #0040BF 50%);
 }
 
 ul {
@@ -60,9 +68,11 @@ ul {
 a {
   cursor: pointer;
   text-decoration: underline;
+  font-weight: 400;
+  font-style: italic;
   -webkit-transition: .1s;
   transition: .1s;
-  color: #000000;
+  color: #FFFFFF;
 }
 
 a:visited {
@@ -84,8 +94,8 @@ button {
   text-transform: uppercase;
   color: #000000;
   background: #FFFFFF;
-  -webkit-box-shadow: 5px 5px #0038FF;
-          box-shadow: 5px 5px #0038FF;
+  -webkit-box-shadow: 5px 5px #0040BF;
+          box-shadow: 5px 5px #0040BF;
   border: none;
   border-radius: 5px;
   padding: 5px 10px 5px 10px;
@@ -94,20 +104,25 @@ button {
 }
 
 button:visited {
-  color: #0038FF;
+  color: #0040BF;
 }
 
 button:hover {
-  color: #0038FF;
-  -webkit-box-shadow: 5px 5px #0038FF;
-          box-shadow: 5px 5px #0038FF;
+  color: #0040BF;
+  -webkit-box-shadow: 5px 5px #0040BF;
+          box-shadow: 5px 5px #0040BF;
 }
 
 button:active {
   color: #FFFFFF;
-  background: #0038FF;
+  background: #0040BF;
   -webkit-box-shadow: 5px 5px #FFFFFF;
           box-shadow: 5px 5px #FFFFFF;
+}
+
+.special {
+  font-weight: 400;
+  font-style: italic;
 }
 
 .content {
@@ -120,13 +135,10 @@ button:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #000000;
+}
+
+.content h2 {
+  font-size: 1.2rem;
 }
 
 .content .title {
@@ -134,13 +146,13 @@ button:active {
 }
 
 .content .title h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: justify;
   font-weight: 400;
 }
 
 .content .title h1 {
-  font-size: 4.5rem;
+  font-size: 4.1rem;
   margin-bottom: 10px;
   font-weight: 800;
 }
@@ -149,78 +161,37 @@ button:active {
   margin-bottom: 20px;
 }
 
-.content .status h2 {
-  font-size: 1.2rem;
-}
-
 .content .status .now {
   font-size: 2rem;
   font-weight: 700;
   color: #FFC72C;
 }
 
+.content .interests {
+  margin-bottom: 50px;
+}
+
 .content .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  max-width: 280px;
-  padding: 5px;
-}
-
-.content .contact .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 5px;
-}
-
-.content .contact h3 {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
       align-self: center;
-  font-size: 1.15rem;
 }
 
-.content .contact a {
-  font-size: 3rem;
-  color: #0038FF;
-}
-
-.content .contact a:hover {
-  color: #FFC72C;
-}
-
-.content .contact a:active {
-  color: #000000;
-  text-decoration: none;
+.content .contact h2 {
+  word-spacing: 40px;
 }
 
 @media (min-width: 425px) {
   html {
     font-size: 80%;
   }
-  .content .contact {
-    max-width: 360px;
-  }
 }
 
 @media (min-width: 992px) {
   html {
-    font-size: 100%;
-  }
-  .content .contact {
-    max-width: 450px;
+    font-size: 170%;
   }
 }
 

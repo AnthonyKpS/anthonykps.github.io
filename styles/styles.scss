@@ -1,7 +1,7 @@
 // Variables
 $secondary: #FFFFFF;
 $primary: #000000;
-$accent: #0038FF;
+$accent: #0040BF;
 $accent_sec: #FFC72C;
 
 * {
@@ -19,16 +19,18 @@ html {
 body {
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Inter, Helvetica, 'sans-serif';
     color: $secondary;
-    background-color: $secondary;
+    background-color: $accent;
     animation-name: load;
     animation-duration: 4s;
 }
 
 .serif {
     font-family: 'Roboto Slab', serif;
-    font-style: italic;
 }
 
 .inactive {
@@ -62,8 +64,10 @@ ul {
 a {
     cursor: pointer;
     text-decoration: underline;
+    font-weight: 400;
+    font-style: italic;
     transition: .1s;
-    color: $primary;
+    color: $secondary;
 
     &:visited {
         text-decoration: none;
@@ -107,25 +111,31 @@ button {
     }  
 }
 
+.special {
+    font-weight: 400;
+    font-style: italic;
+}
+
 .content {
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: $primary;    
-    
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
     .title {
         margin-bottom: 20px;
         h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             text-align: justify;
             font-weight: 400;
         }
     
         h1 {
-            font-size: 4.5rem;
+            font-size: 4.1rem;
             margin-bottom: 10px;
             font-weight: 800;
 
@@ -134,10 +144,6 @@ button {
 
     .status {
         margin-bottom: 20px;
-        h2 {
-            font-size: 1.2rem;
-        }
-
         .now {
             font-size: 2rem;
             font-weight: 700;
@@ -145,37 +151,16 @@ button {
         }
     }
 
+    .interests {
+        margin-bottom: 50px; 
+    }
+
     .contact {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: 280px;
-        padding: 5px;
+        align-self: center;
 
-        .links {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin-bottom: 5px;
-        }
-
-        h3 {
-            align-self: center;
-            font-size: 1.15rem;
-        }
-
-        a {
-            font-size: 3rem;
-            color: $accent;
-        
-            &:hover {
-                color: $accent_sec;
-            }
-        
-            &:active {
-                color: $primary;
-                text-decoration: none;
-            }
+        h2 {
+            word-spacing: 40px;
         }
     }
 }
@@ -185,23 +170,13 @@ button {
         font-size: 80%;
     }
 
-    .content {
-        .contact {
-            max-width: 360px;
-        }
-    }
 }
 
 @media (min-width: 992px) {
     html {
-        font-size: 100%;
+        font-size: 170%;
     }
 
-    .content {
-        .contact {
-            max-width: 450px;
-        }
-    }
 }
 
 @keyframes load {

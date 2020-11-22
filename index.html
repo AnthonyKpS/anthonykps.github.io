@@ -47,45 +47,29 @@
     <title>That's me there!</title>
 </head>
 <body>
-    <div class="content">
-        <div class="title">
-            <h1>
-                Hello, <br>
-                it's <span class="uhighlight">Anthony</span>
-            </h1>
-            <h2>and I speak <span id="sequence" class="highlight"></span></h2>
-        </div>
-        <div class="status">
-            <h2><span class="now">Now: </span>pursuing my <span class="serif">B.Sc</span> degree at <a href="https://www.dit.hua.gr/index.php/en/">dit.hua</a>.</h2>
-        </div>
-        <div class="contact">
-            <div class="links">
-                <a href="https://www.instagram.com/anthony_kps/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.youtube.com/channel/UCn1Vt4k0MXqsnoO4Jkuwi5g"><i class="fab fa-youtube"></i></a>
-                <a href="https://www.linkedin.com/in/anthony-kaparounakis/"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://github.com/AnthonyKpS"><i class="fab fa-github"></i></a>
-                <a href="mailto:antonikapas@gmail.com"><i class="fas fa-envelope"></i></a>
+    <div class="container">
+        <div class="content">
+            <div class="title">
+                <h2>Hey, It's</h2>
+                <h1>
+                    Anthony <br> Kaparounakis
+                </h1>
             </div>
-            <h3>Got an interesting project in mind? Contact me!</h3>            
-            <!--<button>CV</button>-->
-        </div>
+            <div class="status">
+                <h2><span class="now">Now: </span>pursuing my <span class="serif special">B.Sc</span> degree at <a href="https://www.dit.hua.gr/index.php/en/">dit.hua</a>.</h2>
+            </div>
+            <div class="interests">
+                <h2>Mainly interested in <span class="special">computers</span>, <span class="special">politics</span> and <span class="special">food</span></a>.</h2>
+            </div>
+            <div class="contact">
+                <h2>
+                    <a href="https://www.instagram.com/anthony_kps/">instagram</a>
+                    <a href="https://github.com/AnthonyKpS">github</a>
+                    <a href="https://www.linkedin.com/in/anthony-kaparounakis/">linkedin</a>
+                    <a href="mailto:anthonykaparounakis@gmail.com">email</a>
+                </h2>
+            </div>
+        </div >
     </div>
-    <script>
-        // Sequence
-        var words = ['binary', 'assembly','html', 'css', 'scss', 'bootstrap', 'js', 'c', 'c++', 'python', 'sql', 'php', 'linux', 'figma', 'adobe XD' ];
-        textSequence(0);
-
-        function textSequence(i) {
-            if (words.length > i) {
-                setTimeout(function () {
-                    document.getElementById("sequence").innerHTML = words[i] + '.';
-                    textSequence(++i);
-                }, 500); // half a second (in milliseconds)
-
-            } else if (words.length == i) { // Loop
-                textSequence(0);
-            }
-        }
-    </script>
 </body>
 </html>
