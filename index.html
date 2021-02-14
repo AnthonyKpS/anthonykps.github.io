@@ -4,76 +4,76 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!--Favicon-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/assets/favicon/site.webmanifest">
-
-    <!--SEO-->
-    <!-- Primary Meta Tags -->
-    <title>Hello, it's Anthony Kaparounakis!</title>
-    <meta name="title" content="Hello, it's Anthony Kaparounakis">
-    <meta name="description" content="Got an interesting project in mind? Contact me!">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://anthonykps.github.io">
-    <meta property="og:title" content="Hello, it's Anthony Kaparounakis">
-    <meta property="og:description" content="Got an interesting project in mind? Contact me!">
-    <meta property="og:image" content="/assets/meta/meta.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://anthonykps.github.io">
-    <meta property="twitter:title" content="Hello, it's Anthony Kaparounakis">
-    <meta property="twitter:description" content="Got an interesting project in mind? Contact me!">
-    <meta property="twitter:image" content="/assets/meta/meta.jpg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
     <!--CSS-->
     <link rel="stylesheet" href="./styles/styles.css">
 
     <!--Google Font: Inter-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+        <!--Google Font: Roboto Slab-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap" rel="stylesheet">
+
 
 
     <!--Icons-->
-    <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"
-        integrity="sha384-3Nqiqht3ZZEO8FKj7GR1upiI385J92VwWNLj+FqHxtLYxd9l+WYpeqSOrLh0T12c"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
     <title>That's me there!</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="content">
-            <div class="title">
-                <h2>Hey, It's</h2>
-                <h1>
-                    Anthony <br> Kaparounakis
-                </h1>
+
+    <div class="container-fluid">
+        <div class="row no-gutter">
+            <div class="d-none d-md-flex col-md-6 col-lg-6 cover">
             </div>
-            <div class="status">
-                <h2><span class="now">Now: </span>pursuing my <span class="serif special">B.Sc</span> degree and serving
-                    as students' representative at <a href="https://www.dit.hua.gr/index.php/en/">dit.hua</a>. </h2>
-            </div>
-            <div class="interests">
-                <h2>Mainly interested in <span class="special">computers</span>, <span class="special">politics</span>
-                    and <span class="special">food</span></a>.</h2>
-            </div>
-            <div class="contact">
-                <h2>
-                    <a href="https://www.instagram.com/anthony_kps/">instagram</a>
-                    <a href="https://github.com/AnthonyKpS">github</a>
-                    <a href="https://www.linkedin.com/in/anthony-kaparounakis/">linkedin</a>
-                    <a href="mailto:anthonykaparounakis@gmail.com">email</a>
-                </h2>
+            <div class="col-md-6 col-lg-6 content">
+                <div class="title">
+                    <h2>Hello there, I am</h>
+                        <h1>Anthony <br> Kaparounakis</h1>
+                </div>
+                <div class="info">
+                    <p class="lead">
+                        Currently, living in 🇬🇷 while pursuing
+                        my <span class="serif">B.Sc</span> degree and serving as
+                        students’ representative at <a href="#">dit.hua</a>.
+                        Also, always searching for
+                        the next big entrepreneurship project.
+                    </p>
+                </div>
+                <div class="phrase">
+                    <h3>
+                        Mainly interested in <span class="bold">Computers</span>, <span class="bold">Politics</span>,
+                        and
+                        <span class="bold">Food</span>
+                    </h3>
+                </div>
+                <div class="social">
+                    <ul class="social-icon-set">
+                        <li><a href="#"><i class="fab fa-github icon"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram icon"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+                        <button>email me!</button>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

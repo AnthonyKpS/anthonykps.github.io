@@ -1,185 +1,127 @@
-// Variables
-$secondary: #FFFFFF;
-$primary: #000000;
-$accent: #0040BF;
-$accent_sec: #FFC72C;
+/** VARIABLES **/
+$primary: #ffffff;
+$blue: #8aaae5;
+
+/** BASIC STYLING RULES **/
+:root {
+    font-size: 100%;
+    font-size: 16px;
+    line-height: 1.5;
+}
 
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
     height: 100%;
-    
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Inter, Helvetica, 'sans-serif';
-    color: $secondary;
-    background-color: $accent;
-    animation-name: load;
-    animation-duration: 4s;
+    height: 100%;
+    font-family: "Inter", "Helvetica", sans-serif;
+    font-weight: 500;
 }
 
-.serif {
-    font-family: 'Roboto Slab', serif;
+h1 {
+    font-size: 5vw;
+    font-weight: 800;
 }
 
-.inactive {
-    text-decoration-line: line-through;
-    opacity: 50%;
-
-    &:hover {
-        cursor: default;
-        text-shadow: none !important;
-    }
-
-    &:active {
-        color: $secondary !important;
-        text-shadow: none !important;
-    }
+h2 {
+    font-size: 2.25rem;
+    font-weight: 400;
 }
 
-.highlight {
-    color: $accent;
-    font-style: italic;
+p {
+    font-size: 2.25rem !important;
+    font-weight: 500;
 }
 
-.uhighlight {
-    background: linear-gradient(180deg,rgba(255,255,255,0) 50%, $accent 50%);
-}
-
-ul {
-    list-style: none;
+h3 {
+    font-size: 1.62rem;
+    font-weight: 500;
 }
 
 a {
-    cursor: pointer;
+    color: $primary;
     text-decoration: underline;
-    font-weight: 400;
-    font-style: italic;
-    transition: .1s;
-    color: $secondary;
-
-    &:visited {
-        text-decoration: none;
-    }
+    transition: background 0.2s ease;
 
     &:hover {
-        color: $accent_sec;
-    }
-
-    &:active {
-        color: $accent_sec;
+        color: $primary !important;
         text-decoration: none;
+        transition: background 0.2s ease;
     }
 }
 
 button {
-    cursor: pointer;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: $primary;
-    background: $secondary;
-    box-shadow: 5px 5px $accent;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px 5px 10px;
-    transition: .1s;
+    background: $primary;
+    color: $blue;
 
-    &:visited {
-        color: $accent
-    }
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 5px;
+
+    font-size: 1.1rem;
+    font-weight: 800;
+    
+    transition: background 0.2s ease;
 
     &:hover {
-        color: $accent;
-        box-shadow: 5px 5px $accent;
+        background: $blue;
+        color: $primary;
+        transition: background 0.2s ease;
     }
-
-    &:active {
-        color: $secondary;
-        background: $accent;
-        box-shadow: 5px 5px $secondary;
-    }  
 }
 
-.special {
-    font-weight: 400;
+.bold {
+    font-weight: 800;
     font-style: italic;
 }
 
+.serif {
+    font-family: "Roboto Slab", serif;
+    font-style: italic;
+}
+
+.social {
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        list-style: none;
+    }
+}
+
+.icon {
+    font-size: 3.25rem;
+    color: $primary;
+}
+
+.cover,
 .content {
-    height: 100%;
-    width: 100%;
+    min-height: 100vh;
+}
+
+.cover {
+    background-image: url("/assets/profile-blue.png");
+    background-size: cover;
+    background-position: center;
+
+    filter: grayscale(70%);
+}
+
+.content {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    .title {
-        margin-bottom: 20px;
-        h2 {
-            font-size: 2rem;
-            text-align: justify;
-            font-weight: 400;
-        }
-    
-        h1 {
-            font-size: 4.1rem;
-            margin-bottom: 10px;
-            font-weight: 800;
-
-        }
-    }
-
-    .status {
-        margin-bottom: 20px;
-        .now {
-            font-size: 2rem;
-            font-weight: 700;
-            color: $accent_sec;
-        }
-    }
-
-    .interests {
-        margin-bottom: 50px; 
-    }
-
-    .contact {
-        display: flex;
-        align-self: center;
-
-        h2 {
-            word-spacing: 40px;
-        }
-    }
-}
-
-@media (min-width: 425px) {
-    html {
-        font-size: 80%;
-    }
-
-}
-
-@media (min-width: 992px) {
-    html {
-        font-size: 170%;
-    }
-
-}
-
-@keyframes load {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    padding: 50px;
+    background-color: $blue;
+    color: $primary;
 }
