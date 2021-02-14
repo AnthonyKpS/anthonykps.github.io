@@ -67,13 +67,18 @@ button {
 
     font-size: 1.1rem;
     font-weight: 800;
-    
+
     transition: background 0.2s ease;
 
     &:hover {
         background: $blue;
         color: $primary;
         transition: background 0.2s ease;
+    }
+
+    a {
+        color: $blue;
+        text-decoration: none;
     }
 }
 
